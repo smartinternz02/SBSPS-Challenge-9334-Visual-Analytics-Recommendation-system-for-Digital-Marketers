@@ -1,4 +1,119 @@
 #Hi , This is One and Zero group 
-I'm Adarsh Raj.
-I'm Sahana N
-I'm Sampada Bhat
+#I'm Adarsh Raj.
+#I'm Sahana N
+#I'm Sampada Bhat
+
+# to generate report and to do analysis fast and easy we used pandas.
+
+
+import pandas as pd
+from pandas_profiling import ProfileReport
+
+df = pd.read_csv("Digital Marketing Data.csv")
+
+profile = ProfileReport(df)
+profile.to_file(output_file= "Digital Marketing Data Analyse.html")
+
+
+# To get an overview for all variables we used min , median and max function . 
+
+import numpy as np
+import pandas as pd
+import sklearn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import warnings
+
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+df = pd.read_csv("Digital Marketing Data.csv")
+
+Google_Impressions = df[['Google_Impressions']]
+Email_Impressions = df[['Email_Impressions']]
+Facebook_Impressions = df[['Facebook_Impressions']]
+Sales = df[['Sales']]
+Organic_Views = df[['Organic_Views']]
+Paid_Views = df[['Paid_Views']]
+
+#google Overview (Min , Median , Max)
+
+print("Lowest_Google_Impressions")
+print(Google_Impressions.min())
+
+print("Median_Google_Impressions")
+print(Google_Impressions.median())
+
+print("Highest_Google_Impressions")
+print(Google_Impressions.max())
+
+
+
+#Email Overview (Min , Median , Max)
+
+
+print("Lowest_Email_Impressions")
+print(Email_Impressions.min())
+
+print("Median_Email_Impressions")
+print(Email_Impressions.median())
+
+print("Highest_Email_Impressions")
+print(Email_Impressions.max())
+
+#Facebook Overview (Min , Median , Max)
+
+print("Lowest_Facebook_Impressions")
+print( Facebook_Impressions.min() )
+
+print("Median_Facebook_Impressions")
+print(Facebook_Impressions.median())
+
+print("Highest_Facebook_Impressions")
+print(Facebook_Impressions.max())
+
+
+#Sales Overview (Min , Median , Max)
+
+print("Lowest_Sales")
+print(Sales.min())
+
+print("Median_Sales_Impressions")
+print(Sales.median())
+
+print("Highest_Sales")
+print(Sales.max())
+
+#Paid Views Overview (Min , Median , Max)
+
+print("Lowest_Paid_Views")
+print(Paid_Views.min())
+
+print("Median_Paid_Views")
+print(Paid_Views.median())
+
+print("Highest_Paid_Views")
+print(Paid_Views.max())
+
+#Organic Views Overview (Min , Median , Max)
+
+print("Lowest_Organic_Views")
+print(Organic_Views.min())
+
+print("Median_Organic_Views")
+print(Organic_Views.median())
+
+print("Highest_Organic_Views")
+print(Organic_Views.max())
+
+
+
+
+
+
+
+
+
+
+
+
